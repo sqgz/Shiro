@@ -1,4 +1,22 @@
 {
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "http://121.43.244.6.nip.io/api/:path*"
+    },
+    {
+      "source": "/socket.io/:path*",
+      "destination": "http://121.43.244.6.nip.io/socket.io/:path*"
+    },
+    {
+      "source": "/proxy/:path*",
+      "destination": "http://121.43.244.6.nip.io/proxy/:path*"
+    },
+    {
+      "source": "/render/:path*",
+      "destination": "http://121.43.244.6.nip.io/render/:path*"
+    }
+  ],
   "headers": [
     {
       "source": "/",
