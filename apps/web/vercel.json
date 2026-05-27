@@ -2,19 +2,19 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "http://121.43.244.6.nip.io/api/:path*"
+      "destination": "http://121.43.244.6:2333/api/:path*"
     },
     {
       "source": "/socket.io/:path*",
-      "destination": "http://121.43.244.6.nip.io/socket.io/:path*"
+      "destination": "http://121.43.244.6:2333/socket.io/:path*"
     },
     {
       "source": "/proxy/:path*",
-      "destination": "http://121.43.244.6.nip.io/proxy/:path*"
+      "destination": "http://121.43.244.6:2333/proxy/:path*"
     },
     {
       "source": "/render/:path*",
-      "destination": "http://121.43.244.6.nip.io/render/:path*"
+      "destination": "http://121.43.244.6:2333/render/:path*"
     }
   ],
   "headers": [
