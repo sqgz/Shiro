@@ -1,19 +1,12 @@
-import { Manrope, Noto_Serif_SC } from 'next/font/google'
+// Google Fonts blocked in China, use system fonts with CSS fallback chains defined in tailwindcss.css
+// next/font/local requires actual font files, so we provide noop font objects
+// The --font-sans and --font-serif chains in tailwindcss.css have robust CJK fallbacks
 
-const sansFont = Manrope({
-  subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--app-font-sans',
-  display: 'swap',
+const createNoopFont = (variableName: string) => ({
+  variable: variableName,
 })
 
-const serifFont = Noto_Serif_SC({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--app-font-serif',
-  display: 'swap',
-  // adjustFontFallback: false,
-  fallback: ['Noto Serif SC'],
-})
+const sansFont = createNoopFont('__variable_font-sans')
+const serifFont = createNoopFont('__variable_font-serif')
 
 export { sansFont, serifFont }
