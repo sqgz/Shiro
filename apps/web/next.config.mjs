@@ -23,11 +23,18 @@ if (repoInfo) {
 
 /** @type {import('next').NextConfig} */
 
+const vercelDeployEnv = process.env.VERCEL ? {
+  NEXT_PUBLIC_API_URL: 'http://121.43.244.6:2333/api/v2',
+  NEXT_PUBLIC_CLIENT_API_URL: '/api/v2',
+  NEXT_PUBLIC_GATEWAY_URL: 'http://121.43.244.6:2333',
+} : {}
+
 let nextConfig = {
   env: {
     COMMIT_HASH: commitHash,
     COMMIT_URL: commitUrl,
     BUILD_TIME: new Date().toISOString(),
+    ...vercelDeployEnv,
   },
 
   reactStrictMode: true,
