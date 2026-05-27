@@ -163,6 +163,7 @@
     "vitest": "^4.1.0",
     "zx": "8.8.5"
   },
+  "packageManager": "pnpm@10.27.0",
   "nextBundleAnalysis": {
     "budget": 358400,
     "budgetPercentIncreaseRed": 20,
